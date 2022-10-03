@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./css/pink.css">
+
+    <!--Live Style Switcher-->
+    <link rel="stylesheet" class="alternate-style" title="blue" type="text/css" href="./css/blue.css" disabled>
+    <link rel="stylesheet"  class="alternate-style" title="green" type="text/css" href="./css/green.css" disabled>
+    <link rel="stylesheet"  class="alternate-style" title="orange" type="text/css" href="./css/orange.css" disabled>
+    <link rel="stylesheet"  class="alternate-style" title="yellow" type="text/css" href="./css/yellow.css" disabled>
+    <link rel="stylesheet"  class="alternate-style" title="pink" type="text/css" href="./css/pink.css">
+    <link rel="stylesheet" type="text/css" href="./css/styleSwitcher.css">
+
+    <title>fardeen khan</title>
+    <script>
+        var bleep = new Audio();
+        bleep.src = "./audio/bleep.mp3";
+    </script>
+    <script>
+        var button = new Audio();
+        button.src = "./audio/button-19.mp3";
+    </script>
+    <script>
+        var intro = new Audio();
+        intro.src = "./audio/intro.mp3";
+    </script>
+    <script>
+        var whistle = new Audio();
+        whistle.src = "./audio/whistle.mp3";
+    </script>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .table-container{
+                padding: 0 10%;
+                margin: 40px auto 0;
+            }
+            .heading{
+                font-size: 40px;
+                text-align: center;
+                color: #f1f1f1;
+                margin-bottom: 40px;
+            }
+            .table{
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .table thead{
+                background-color: #ee2828;
+            }
+            .table thead tr th{
+                font-size: 14px;
+                font-weight: medium;
+                letter-spacing: 0.35px;
+                color: #FFFFFF;
+                opacity: 1;
+                padding: 12px;
+                vertical-align: top;
+                border: 1px solid #dee2e685;
+            }
+            .table tbody tr td{
+                font-size: 14px;
+                letter-spacing: 0.35px;
+                font-weight: normal;
+                color: #f1f1f1;
+                background-color: #3c3f44;
+                padding: 8px;
+                text-align: center;
+                border: 1px solid #dee2e685;
+            }
+            .table tbody tr td .btn{
+                width: 130px;
+                text-decoration: none;
+                line-height: 35px;
+                display: block;
+                background-color: #ff1046;
+                font-weight: medium;
+                color: #FFFFFF;
+                text-align: center;
+                vertical-align: middle;
+                user-select: none;
+                border: 1px solid transparent;
+                font-size: 14px;
+                opacity: 1;
+            }
+    
+    @media (max-width: 768px){
+        .table thread{
+            display: none;
+        }
+        .table, .table tbody,.table tr,.table td{
+            display: block;
+            width: 100%;
+        }
+        .table tr{
+            margin-bottom: 15px;
+        }
+        .table tbody tr td{
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+        }
+        .table td:before{
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            padding-left: 15px;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+    
+        </style>
+</head>
+<body>
+    <!--PreLoader-->
+    <div class="preloader">
+        <div class="loader">
+
+        </div>
+    </div>
+    <!--Preloader End-->
+<!--Main Container-->
+<div class="main-container">
+    <!--Aside-->
+    <div class="aside">
+        <!--Logo-->
+        <div class="logo">
+            <a href="#">HEYYA</a>
+        </div>
+        <!--Nav Toggler Button-->
+        <div class="nav-toggler" onclick="intro.play()">
+            <span></span>
+        </div>
+        <!--NAV-->
+        <ul class="nav">
+            <li><a href="#home" onmouseover="bleep.play()" class="active"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#about" onmouseover="bleep.play()"><i class="fa fa-user"></i> About</a></li>
+            <li><a href="http://kriptonblogs.me/bumbla/" onmouseover="bleep.play()"><i class="fa fa-gamepad"></i> Play</a></li>
+        <!--   <li><a href="http://kriptonblogs.me/Rubix-main/" onmouseover="bleep.play()"><i class="fa fa-gamepad"></i> Play</a></li>-->
+            <li><a href="https://hackerinthehouse.in/" onmouseover="bleep.play()"><i class="fa fa-globe"></i> Blog</a></li>
+            <li><a href="#portfolio" onmouseover="bleep.play()"><i class="fa fa-briefcase"></i> Achievements</a></li>
+            <li><a href="#contact" onmouseover="bleep.play()"><i class="fa fa-comments"></i> Contact</a></li>
+        </ul>
+        <!--Copyright-->
+        <div class="copyright-text">
+            &copy; KRiPPto99
+        </div>
+    </div>
+    <!--Aside End-->
+    <!--Main Content-->
+    <div class="main-content">
+        <!--Home Section-->
+        <section class="home section active" id="home"> 
+            <div class="container">
+                <div class="intro">
+                    <img src="./images/profile.jpg" alt="profile" class="shadow-dark">
+                    <h1>Fardeen Khan</h1>
+                    <p>Cybersecurity Researcher</p><br>
+                    <p>(krippto99)</p>
+                    <div class="social-link">
+                        <a href="https://twitter.com/KriptonKripsi" onmouseover="bleep.play()"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/krippto99/" onmouseover="bleep.play()"><i class="fa fa-instagram"></i></a>
+                        <a href="https://github.com/KRiPPto99"><i class="fa fa-github" onmouseover="bleep.play()"></i></a>
+                        <a href="https://www.linkedin.com/in/fardeen-khan-84720b14b/" onmouseover="bleep.play()"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Home Section End-->
+        <!--About Section-->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>About</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="about-content padd-15">
+                        <div class="row">
+                            <div class="about-text padd-15">
+                                <h3>I'm Fardeen Khan<span> Cybersecurity Researcher</span></h3>
+                                <p>Fardeen Khan is a Cybersecurity Researcher, Game Developer and a Bug Hunter. He learned ethical hacking via Opensource. Skilled in Linux,Networking security, WebApplication Security, and have acquired the necessary skills and knowledge to secure your domain. BSc.IT Final year student highly passionate about Cyber Security & Penetration testing always seeking to get a hands-on security domain.</p>
+                            </div>
+                        </div>
+                         <div class="row">
+                             <div class="personal-info padd-15">
+                                <div class="row">
+                                    <div class="info-item padd-15">
+                                        <p>Birthday : <span>18 April 2000</span></p>
+                                    </div>
+                                    <div class="info-item padd-15">
+                                       <p>Age : <span>22</span></p>
+                                   </div>
+                                   <div class="info-item padd-15">
+                                       <p>E-mail : <span>romanempirekk@gmail.com</span></p>
+                                   </div>
+                                   <div class="info-item padd-15">
+                                       <p>Education : <span>Bachelor of Science in Information Technology </span></p>
+                                   </div>
+                                   <div class="info-item padd-15">
+                                       <p>Phone : <span>+91 XXXXXXXXXX</span></p>
+                                   </div>
+                                   <div class="info-item padd-15">
+                                       <p>City : <span>Chikkmagalore</span></p>
+                                   </div>
+                                   <div class="info-item padd-15">
+                                       <p>State : <span>Karnataka</span></p>
+                                   </div>
+                                </div>
+                                <div class="row">
+                                    <div class="buttons padd-15">
+                                        <a href="#" class="btn" onclick="button.play()">Download CV</a>
+                                        <!--<a href="#" class="btn">Hire Me</a>-->
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="skills padd-15">
+                             <div class="row">
+                                 <div class="skill-item padd-15">
+                                     <h5>WebApp Pentesting</h5>
+                                     <div class="progress">
+                                         <div class="progress-in" style="width: 85%"></div>
+                                         <div class="skill-percent">85%</div>
+                                     </div>
+                                 </div>
+                                 <div class="skill-item padd-15">
+                                    <h5>Network Pentesting</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 95%"></div>
+                                        <div class="skill-percent">85%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>SOC</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 95%"></div>
+                                        <div class="skill-percent">95%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>Networking</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 95%"></div>
+                                        <div class="skill-percent">95%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>Bash Scripting</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 90%"></div>
+                                        <div class="skill-percent">90%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>Digital forensics</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 90%"></div>
+                                        <div class="skill-percent">80%</div>
+                                    </div>
+                                </div>
+                                <div class="skill-item padd-15">
+                                    <h5>Python Programming</h5>
+                                    <div class="progress">
+                                        <div class="progress-in" style="width: 75%"></div>
+                                        <div class="skill-percent">75%</div>
+                                    </div>
+                                </div>
+                             </div>
+                          </div>
+                         </div>
+
+                         <div class="row">
+                            <div class="education padd-15">
+                                <h3 class="title">Education</h3>
+                                <div class="row">
+                                    <div class="timeline-box padd-15">
+                                    <div class="timeline shadow-dark">
+                                        <!--Timeline Item-->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h6 class="timeline-date"><i class="fa fa-calendar"></i>2020-Present</h6>
+                                            <h4 class="timeline-title">Studying in Singhania University</h4>
+                                            <p class="timeline-text">Final year in Bachelor of Science in Information Technology<a href="https://singhaniauniversity.co.in/">ARENA Animations, India</a></p>
+                                        </div>
+                                        <!--TTimeline-item-end-->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                                <h6 class="timeline-date"><i class="fa fa-calendar"></i>2019-2021</h6>
+                                                <h4 class="timeline-title">Studied in ARENA Animations</h4>
+                                                <p class="timeline-text">Certified in VFX PRIME and Visual effects  <a href="https://www.arena-multimedia.com/">Singhania University, India</a></p>
+                                            </div>
+                                            <!--TTimeline-item-end-->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                            <h6 class="timeline-date"><i class="fa fa-calendar"></i>2016 - 2018</h6>
+                                            <h4 class="timeline-title">Completed 10 + 2 in Varapradha PU College</h4>
+                                            <p class="timeline-text">Completed Pre University Course </p>
+                                        </div>
+                                            <!--TTimeline-item-end-->                
+                                        </div>
+                                    </div> 
+                                </div> 
+                                </div>
+                            
+                            <div class="experience padd-15">
+                                <h3 class="title">Experience</h3>
+                                <div class="row">
+                                    <div class="timeline-box padd-15">
+                                    <div class="timeline shadow-dark">
+                                        <!--Timeline Item-->
+                                        <div class="timeline-item">
+                                        <div class="circle-dot"></div>
+                                            <h6 class="timeline-date"><i class="fa fa-calendar"></i>September(2022) - Present</h6>
+                                            <h4 class="timeline-title">Co-Founder | <a href="https://www.hackerinthehouse.in/">Hackerinthehouse.in</a></h4>
+                                            <p class="timeline-text"><b>Activities :</b></p>
+                                            <p class="timeline-text">➢ C0-Founder at <a href="https://www.hackerinthehouse.in/">Hackerinthehouse.in</a></p>
+                                        </div>
+                                        <!--TTimeline-item-end-->
+                                        <div class="timeline-item">
+                                        <div class="circle-dot"></div>
+                                            <h6 class="timeline-date"><i class="fa fa-calendar"></i>September(2022) - Present</h6>
+                                            <h4 class="timeline-title">Bug Bounty Hunter</h4>
+                                            <p class="timeline-text"><b>Activities :</b></p>
+                                            <p class="timeline-text">➢ Working as independent Bug Bounty Hunter on-demand within self-employed job.</p>
+                                        </div>
+                                        <!--TTimeline-item-end-->
+                                        <div class="timeline-item">
+                                        <div class="circle-dot"></div>
+                                            <h6 class="timeline-date"><i class="fa fa-calendar"></i>January - March(2022)</h6>
+                                            <h4 class="timeline-title">Cybersecurity TAAZINFOTECH Intern</h4>
+                                            <p class="timeline-text"><b>Activities :</b></p>
+                                            <p class="timeline-text">➢ Automation & Manual Reporting.</p>
+                                            <p class="timeline-text">➢ Performing Web and App testing.</p>
+                                            <p class="timeline-text">➢ Daily Meeting & Reporting.</p>
+                                            <p class="timeline-text">➢ Creating Test Plan, Writing Test Cases, Performing the Manual Test.</p>
+                                            <p class="timeline-text">➢ Working with a Team of Developers.</p>
+                                        </div>
+                                        <!--TTimeline-item-end-->
+                                        <div class="timeline-item">
+                                            <div class="circle-dot"></div>
+                                                <h6 class="timeline-date"><i class="fa fa-calendar"></i>May - July (2022) </h6>
+                                                <h4 class="timeline-title">Teachnook</h4>
+                                                <p class="timeline-text"><b>Activities :</b></p>
+                                                <p class="timeline-text">➢ Developed Cybersecurity projects. </p>
+                                                <p class="timeline-text">➢ learned owasp top 10 and Networking Concept  </p>
+                                                <p class="timeline-text">➢ Weekly Assignments.  </p>
+                                                <p class="timeline-text">➢ learned cryptography in Details.  </p>
+                                            </div>
+                                        </div>
+                                            <!--TTimeline-item-end-->
+                                    </div> 
+                                </div> 
+                                   
+                            </div>                                           
+                            
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--About Section End-->
+        
+        <!--Portfolio Section-->
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>Achievements</h2>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="portfolio-filter padd-15">
+                        <!--
+                        <button type="button" class="active" data-filter="all">All</button>
+                        <button type="button" data-filter="web-design">Web-design</button>
+                        <button type="button" data-filter="photography">Photography</button>
+                        <button type="button" data-filter="wordpress">Wordpress</button>
+                        -->
+                    </div>
+                </div>
+                <div class="row portfolio-items">
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt1.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Coursera</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="wordpress" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt2.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Udemy</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="photography" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt3.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Coursera</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt4.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Arena Animations</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt5.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Arena Animations</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="wordpress" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt6.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Coursera</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt7.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Coursera</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt8.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Microsoft</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt9.jpg" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Udemy</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt10.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Cisco</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt11.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Coursera</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt12.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Coursera</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt13.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Coursera</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt14.jpg" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Udemy</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt15.jpg" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Cyberyami</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt16.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By RISE</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt17.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By Internshala</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt18.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By EC-Council</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt19.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By IMB</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                    <!-- Start Portfolio item -->
+                    <div class="portfolio-item padd-15" data-category="web-design" onclick="whistle.play()">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <img src="./images/crt20.png" alt="portfolio">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>By EC-Council</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Portfolio item -->
+                </div>
+            </div>
+        </section>
+        
+        <!--Contact Section-->
+        <section class="contact section" id="contact">
+                <div class="container">
+                    <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>Contact Me</h2>
+                    </div>
+                    </div>
+                <div class="row">
+                    <!--Contact info item-->
+                    <div class="contact-info-item padd-15">
+                        <div class="icon"><i class="fa fa-phone"></i></div>
+                        <h4>Call Me On</h4>
+                        <p>+91 XXXXXXXXXX</p>
+                    </div>
+                    <!--Contact info item End-->
+                    <!--Contact info item-->
+                    <div class="contact-info-item padd-15">
+                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>romanempirekk@gmail.com</p>
+                    </div>
+                    <!--Contact info item End-->
+                 </div>
+                    
+                    <div class="row">
+                        <form class="contact-form padd-15">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12">
+                                    <div class="form-group">
+                                    <textarea type="text" class="form-control" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 padd-15">
+                                <button type="submit" class="btn" onmouseover="button.play()" onclick="whistle.play()">Send Message</button>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <!--Contact Form End-->
+                
+                </div> 
+        </section>       
+        <!--Contact Section End-->
+    </div>
+    <!--Main content end-->
+</div>
+<!--Main Container-->
+
+<!--LightBox-->
+<div class="lightbox ">
+    <div class="lightbox-content">
+        <div class="lightbox-close">&times;</div>
+        <img src="./images/snake.gif" class="lightbox-img" onclick="nextItem()">
+        <div class="lightbox-caption">
+            <div class="caption-text"></div>
+            <div class="caption-counter"></div>
+        </div>
+
+    </div>
+    <div class="lightbox-controls">
+        <div class="prev-item" onclick="prevItem()"><i class="fa fa-angle-left"></i></div>
+        <div class="next-item" onclick="nextItem()"><i class="fa fa-angle-right"></i></div>
+    </div>
+</div>
+<!--LightBox End-->
+
+<!--Live Stle Switcher-->
+<div class="style-switcher">
+    <div class="toggle-style-switcher" onclick="bleep.play()">
+        <i class="fa fa-cog fa-spin" onclick="bleep.play()"></i>
+    </div>    
+    <h5>Style Switcher</h5>
+    <ul>
+        <li><a href="javascript:void(0);" title="pink" style="background-color: #ec1839;" onclick="setActiveStyle('pink')"></a></li>
+        <li><a href="javascript:void(0);" title="blue" style="background-color: #2196f3;" onclick="setActiveStyle('blue')"></a></li>
+        <li><a href="javascript:void(0);" title="green" style="background-color: #72b626;" onclick="setActiveStyle('green')"></a></li>
+        <li><a href="javascript:void(0);" title="orange" style="background-color: #fa5b07;" onclick="setActiveStyle('orange')"></a></li>
+        <li><a href="javascript:void(0);" title="yellow" style="background-color: #ffb400;" onclick="setActiveStyle('yellow')"></a></li>
+    </ul>
+    <h5>Body Skin</h5>
+    <label>
+        <input type="radio" class="body-skin" name="body-style" value="light" checked="true" onclick="whistle.play()">
+        Light
+    </label>
+    <label>
+        <input type="radio" class="body-skin" name="body-style" value="dark" onclick="whistle.play()">
+        Dark
+    </label>
+</div>
+
+<!--Live Style Switcher End here-->
+
+<script src="js/script.js"></script>
+<script src="./js/styleSwitcher.js"></script>
+
+</body>
+</html>
